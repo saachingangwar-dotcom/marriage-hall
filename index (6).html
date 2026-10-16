@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ===== SEO: REPLACE THE TEXT IN [BRACKETS] ===== -->
+<title>[MARRIAGE HALL NAME] | Wedding Venue in [CITY]</title>
+<meta name="description" content="[MARRIAGE HALL NAME] is a wedding venue in [CITY]. Enquire about weddings, receptions and events on WhatsApp.">
+<meta property="og:title" content="[MARRIAGE HALL NAME] | Wedding Venue">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- Local business SEO: replace values below with your real details -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EventVenue","name":"[MARRIAGE HALL NAME]",
+"telephone":"[PHONE]","email":"[EMAIL]","address":{"@type":"PostalAddress","streetAddress":"[ADDRESS]","addressLocality":"[CITY]","addressRegion":"[STATE]","addressCountry":"IN"}}
+</script>
+</head>
+<body>
+<div id="loader" aria-hidden="true"><span class="brand-name">Loading</span></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="nav">
+  <a href="#home" class="logo brand-name"></a>
+  <button id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="menu" aria-label="Main">
+    <a href="#about">About</a><a href="#facilities">Facilities</a><a href="#gallery">Gallery</a>
+    <a href="#packages">Packages</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    <a href="#booking" class="btn small">Book a Date</a>
+  </nav>
+</header>
+
+<main id="main">
+<section id="home" class="hero">
+  <div class="hero-in">
+    <p class="tagline">Where Beautiful Beginnings Become Timeless Memories</p>
+    <h1>Celebrate Your Forever With Us</h1>
+    <p class="sub">Your Dream Wedding, Perfectly Celebrated.</p>
+    <div class="btns"><a href="#booking" class="btn">Book Your Wedding Date</a><a href="#gallery" class="btn ghost">Explore Our Venue</a></div>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <div class="wrap two">
+    <div>
+      <h2>About <span class="brand-name"></span></h2>
+      <p id="aboutText"></p>
+      <ul id="highlights" class="ticks"></ul>
+    </div>
+    <img id="aboutImg" loading="lazy" alt="Wedding hall interior" class="frame">
+  </div>
+</section>
+
+<section id="facilities" class="sec dark">
+  <div class="wrap"><h2>Our Facilities</h2><div id="facilityGrid" class="grid"></div></div>
+</section>
+
+<section id="gallery" class="sec">
+  <div class="wrap"><h2>Wedding Gallery</h2><p class="note">Sample images. Replace with photos of your own venue in script.js.</p>
+  <div id="galleryGrid" class="masonry"></div></div>
+</section>
+
+<section id="packages" class="sec dark">
+  <div class="wrap"><h2>Wedding Packages</h2><div id="packageGrid" class="grid"></div></div>
+</section>
+
+<section id="booking" class="sec">
+  <div class="wrap narrow">
+    <h2>Booking Enquiry</h2>
+    <p class="note">This form opens WhatsApp with your details filled in. <strong>You must press Send in WhatsApp</strong> to submit your enquiry. Your date is not booked until the venue confirms it.</p>
+    <form id="bookForm" novalidate>
+      <label>Your name<input name="name" required autocomplete="name"><small class="err"></small></label>
+      <label>Mobile number<input name="mobile" type="tel" required autocomplete="tel" placeholder="10-digit number"><small class="err"></small></label>
+      <label>Event type
+        <select name="event" required><option value="">Select</option><option>Wedding</option><option>Engagement</option><option>Reception</option><option>Birthday / Anniversary</option><option>Other</option></select><small class="err"></small></label>
+      <label>Preferred date<input name="date" type="date" required><small class="err"></small></label>
+      <label>Expected guests<input name="guests" type="number" min="1" required><small class="err"></small></label>
+      <label>Preferred package<select name="pack" id="packSelect"></select></label>
+      <label class="full">Additional requirements<textarea name="notes" rows="3"></textarea></label>
+      <button class="btn full" type="submit">Send Enquiry on WhatsApp</button>
+    </form>
+    <div id="confirm" class="confirm" role="status" hidden></div>
+  </div>
+</section>
+
+<section id="reviews" class="sec dark">
+  <div class="wrap"><h2>Guest Reviews</h2><div id="reviewGrid" class="grid"></div><p id="reviewLink" class="center"></p></div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="wrap two">
+    <div>
+      <h2>Contact Us</h2>
+      <address id="addr"></address>
+      <p id="hours"></p>
+      <div class="btns" id="contactBtns"></div>
+    </div>
+    <div id="mapBox" class="frame mapbox"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p class="brand-name"></p><p id="footAddr"></p>
+  <p id="footLinks" class="foot-links"></p>
+  <p class="copy">&copy; <span id="year"></span> <span class="brand-name"></span></p>
+</footer>
+
+<a id="waFloat" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.800 1.200 1.200-3.700-.3-.4A10.700 10.700 0 1 1 16 26.700zm5.900-8c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200s-.8 1-1 1.200c-.2.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.800c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.700 3.700 0 0 0-1.100 2.700c0 1.600 1.200 3.200 1.300 3.400.2.200 2.300 3.500 5.600 4.900 2.100.9 2.900 1 3.900.8.600-.1 1.900-.8 2.100-1.500.3-.8.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button id="lbClose" aria-label="Close">&times;</button>
+  <button id="lbPrev" aria-label="Previous">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
